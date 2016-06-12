@@ -82,7 +82,7 @@
 		</tr>
 		<tr>
 			<td style='width:25%;'><label for='ubicacion' style='margin-left:40%;'>Ubicacion</label></td>	
-			<td colspan='3' style><input type='text' style='width:70%; border: none; box-shadow:0px 1px;' name='ubicacion' placeholder='Ubicacion del Inmueble'></td>
+			<td colspan='3' style><input type='text' style='width:70%; zborder: none; box-shadow:0px 1px;' name='ubicacion' placeholder='Ubicacion del Inmueble'></td>
 		</tr>
 		<tr>
 			<td style='width:10%;'><label for='departamento' style='margin-left:40%;'>Departamento</label></td>
