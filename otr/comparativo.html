@@ -1,0 +1,550 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Formulario 3</title>
+	<meta name='author' content=''>
+	<meta name='description' content='Sistema de Valuo de Inmuebles'>
+	<meta charset='utf-8'>
+	<link rel='stylesheet' href='css/estilo.css'>
+</head>
+<body>
+	<div id='contenedor'>
+		<fieldset>
+			<legend>Cuadro comparativo de Mercado: </legend>
+		<table class='informacion'>
+		<tr>
+			<td>
+				<select name='hm'>
+					<option value='HVV'><b>HOMOLOGACION DE VALOR DE VARA</b></option>
+					<option value='HVT'><b>HOMOLOGACION DE VALOR DE TERRENO</b></option>
+					<option value='HVV'><b>HOMOLOGACION DE VALOR DE INMUEBLE</b></option>
+				</select></td>
+		<tr>
+			<td>
+				<label><b>Referente#1: </b></label>
+				<select name='referente'>
+					<option value=''>Seleccione</option>
+				</select>
+		</tr>
+		<tr>
+			<td>
+				<label for='TipoInmb' style='width:7%;'>Tipo de Inmueble: </label>
+				<label for='TInmb' style='width:7%;'></label>
+			</td>
+			<td>
+				<label for='EstadoCons'>Estado de consevacion:</label>
+				<label for='EstCon'></label>
+			</td>
+			<td></td>
+			<td></td>
+
+			<td>
+				<label for='Edad'style='width:7%;'>Edad: </label></td>
+			<td>
+				<label for='Años' style='width:7%;'> </label>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<label for='UsoSuelo' style='width:7%;'>Uso de Suelo: </label>
+				<label for='usoS' style='width:7%;'></label>
+			</td>
+
+			<td>
+				<label for='AreaCons'>Area de Construccion:</label>
+				<label for='AreaC'></label>
+			</td>
+			
+			<td>
+				<label for='Precio' style='width:7%;'>Precio/M²: </label>
+				<label for='p' style='width:8%;'></label>
+			</td>
+			<td></td>
+			<td>
+				<label for='Const' style='width:7%;'>Const: </label>
+				<label for='C' style='width:7%;'></label></td>
+
+		</tr>
+		<tr>
+			<td>
+				<label for='TipoAcc'>Tipo de Acceso: </label>
+				<label for='TipoA'></label>
+			</td>
+
+			<td>
+				<label for='Area' style='width:7%;'>Area:</label>
+				<label for='A'></label>
+			</td>
+			<td>
+				<label for=''></label></td>
+
+			<td></td>
+			<td>
+				<label for='Residual' style='width:7%;'>Residual: </label>
+				<label for='R'></label>
+			</td>
+
+
+		</tr>
+		<tr>
+			<td>
+				<label for='TipoUbi' style='width:7%;'>Tipo de Ubicacion: </label>
+				<label for='TipoU' style='width:7%;'></label></td>
+			<td>
+				<label for='ipc'>IPC</label>
+				<label for='usoS'></label></td>
+
+			<td>
+				<label for='Terreno' style='width:7%;'>Terreno: </label>
+				<label for='T'></label></td>
+			<td></td>
+			<td><label for='PreInd' style='width:7%;'>Pre. Indice Vr²: </label>
+				<label for='PreIV' style='width:8%;'></label></td>
+		</tr>
+
+		<tr>
+			<td>
+				<label for='ServBas' style='width:7%;'>Serv. Basicos: </label>
+				<label for='SB'></label>
+			</td>
+			<td>
+				<label for='ConsDepr'>Construccion Depreciada:</label>
+				<label for='CD'></label>
+			</td>
+			<td></td>
+			<td>
+				<label for='Mejoras'>Mejoras: </label>
+				<label for='M'></label>
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+				<label for='FactSeg'>Factor Seguridad: </label>
+				<label for='FS'></label>
+			</td>
+			<td>
+				<label for='VNR'>VNR:</label>
+				<label for='vnr'></label>
+			</td>
+
+			<td><label for='ValorInmb'>Valor del Inmueble: </label>
+				<label for='VI'>  $0.0</label>
+				<br><br>
+				</td>
+
+		</tr>
+		<tr>
+			<td>
+				<label><b>Referente#2: </b></label>
+				<select name='referente'>
+					<option value=''>Seleccione</option>
+				</select>
+		</tr>
+		<tr>
+			<td>
+				<label for='TipoInmb' style='width:7%;'>Tipo de Inmueble: </label>
+				<label for='TInmb' style='width:7%;'></label>
+			</td>
+			<td>
+				<label for='EstadoCons'>Estado de consevacion:</label>
+				<label for='EstCon'></label>
+			</td>
+			<td></td>
+			<td></td>
+
+			<td>
+				<label for='Edad'style='width:7%;'>Edad: </label></td>
+			<td>
+				<label for='Años' style='width:7%;'> </label>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<label for='UsoSuelo' style='width:7%;'>Uso de Suelo: </label>
+				<label for='usoS' style='width:7%;'></label>
+			</td>
+
+			<td>
+				<label for='AreaCons'>Area de Construccion:</label>
+				<label for='AreaC'></label>
+			</td>
+			
+			<td>
+				<label for='Precio' style='width:7%;'>Precio/M²: </label>
+				<label for='p' style='width:8%;'></label>
+			</td>
+			<td></td>
+			
+			<td>
+				<label for='Const' style='width:7%;'>Const: </label>
+				<label for='C' style='width:7%;'></label></td>
+
+		</tr>
+		<tr>
+			<td>
+				<label for='TipoAcc'>Tipo de Acceso: </label>
+				<label for='TipoA'></label>
+			</td>
+
+			<td>
+				<label for='Area' style='width:7%;'>Area:</label>
+				<label for='A'></label>
+			</td>
+			<td>
+				<label for=''></label></td>
+
+			<td></td>
+			<td>
+				<label for='Residual' style='width:7%;'>Residual: </label>
+				<label for='R'></label>
+			</td>
+
+
+		</tr>
+		<tr>
+			<td>
+				<label for='TipoUbi' style='width:7%;'>Tipo de Ubicacion: </label>
+				<label for='TipoU' style='width:7%;'></label></td>
+			<td>
+				<label for='ipc'>IPC</label>
+				<label for='usoS'></label></td>
+
+			<td>
+				<label for='Terreno' style='width:7%;'>Terreno: </label>
+				<label for='T'></label></td>
+			<td></td>
+			<td><label for='PreInd' style='width:7%;'>Pre. Indice Vr²: </label>
+				<label for='PreIV' style='width:8%;'></label></td>
+		</tr>
+
+		<tr>
+			<td>
+				<label for='ServBas' style='width:7%;'>Serv. Basicos: </label>
+				<label for='SB'></label>
+			</td>
+			<td>
+				<label for='ConsDepr'>Construccion Depreciada:</label>
+				<label for='CD'></label>
+			</td>
+			<td></td>
+			<td>
+				<label for='Mejoras'>Mejoras: </label>
+				<label for='M'></label>
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+				<label for='FactSeg'>Factor Seguridad: </label>
+				<label for='FS'></label>
+			</td>
+			<td>
+				<label for='VNR'>VNR:</label>
+				<label for='vnr'></label>
+			</td>
+
+			<td><label for='ValorInmb'>Valor del Inmueble: </label>
+				<label for='VI'>  $0.0</label>
+				<br><br>
+			</td>
+
+		</tr>
+		<tr>
+			<td><label><b>Referente#3: </b></label>
+				<select name='referente'>
+					<option value=''>Seleccione</option>
+				</select>
+		</tr>
+		<tr>
+			<td>
+				<label for='TipoInmb' style='width:7%;'>Tipo de Inmueble: </label>
+				<label for='TInmb' style='width:7%;'></label>
+			</td>
+			<td>
+				<label for='EstadoCons'>Estado de consevacion:</label>
+				<label for='EstCon'></label>
+			</td>
+			<td></td>
+			<td></td>
+
+			<td>
+				<label for='Edad'style='width:7%;'>Edad: </label></td>
+			<td>
+				<label for='Años' style='width:7%;'> </label>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<label for='UsoSuelo' style='width:7%;'>Uso de Suelo: </label>
+				<label for='usoS' style='width:7%;'></label>
+			</td>
+
+			<td>
+				<label for='AreaCons'>Area de Construccion:</label>
+				<label for='AreaC'></label>
+			</td>
+			
+			<td>
+				<label for='Precio' style='width:7%;'>Precio/M²: </label>
+				<label for='p' style='width:8%;'></label>
+			</td>
+			<td></td>
+			<td>
+				<label for='Const' style='width:7%;'>Const: </label>
+				<label for='C' style='width:7%;'></label></td>
+
+		</tr>
+		<tr>
+			<td>
+				<label for='TipoAcc'>Tipo de Acceso: </label>
+				<label for='TipoA'></label>
+			</td>
+
+			<td>
+				<label for='Area' style='width:7%;'>Area:</label>
+				<label for='A'></label>
+			</td>
+			<td>
+				<label for=''></label></td>
+
+			<td></td>
+			<td>
+				<label for='Residual' style='width:7%;'>Residual: </label>
+				<label for='R'></label>
+			</td>
+
+
+		</tr>
+		<tr>
+			<td>
+				<label for='TipoUbi' style='width:7%;'>Tipo de Ubicacion: </label>
+				<label for='TipoU' style='width:7%;'></label></td>
+			<td>
+				<label for='ipc'>IPC</label>
+				<label for='usoS'></label></td>
+
+			<td>
+				<label for='Terreno' style='width:7%;'>Terreno: </label>
+				<label for='T'></label></td>
+			<td></td>
+			<td><label for='PreInd' style='width:7%;'>Pre. Indice Vr²: </label>
+				<label for='PreIV' style='width:8%;'></label></td>
+		</tr>
+
+		<tr>
+			<td>
+				<label for='ServBas' style='width:7%;'>Serv. Basicos: </label>
+				<label for='SB'></label>
+			</td>
+			<td>
+				<label for='ConsDepr'>Construccion Depreciada:</label>
+				<label for='CD'></label>
+			</td>
+			<td></td>
+			<td>
+				<label for='Mejoras'>Mejoras: </label>
+				<label for='M'></label>
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+				<label for='FactSeg'>Factor Seguridad: </label>
+				<label for='FS'></label>
+			</td>
+			<td>
+				<label for='VNR'>VNR:</label>
+				<label for='vnr'></label>
+			</td>
+
+			<td>
+				<label for='ValorInmb'>Valor del Inmueble: </label>
+				<label for='VI'>  $0.0</label>
+				<br><br>
+			</td>
+
+		</tr>
+
+		<tr>
+			<table border="1" class='informacion'>
+		<tr>
+			<td>
+				<b>Inmueble</b>
+			</td>
+
+			<td>
+				<b>Seguridad</b>
+			</td>
+
+			<td>
+				<b>Servicios Basicos</b>
+			</td>
+
+			<td>
+				<b>Plotage</b>
+			</td>
+			<td>
+				<b>Ubicacion</b>
+			</td>
+			<td>
+				<b>Via de Acceso</b>
+			</td>
+			<td>
+				<b>Total</b>
+			</td>
+
+
+</tr>
+<tr>
+<td><label></label></td>
+<td><label size='3'><b>desc.</b></label>
+<label size='3' ><b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  factor</b></label>
+</td>
+<td><label size='3'><b>Descip.</b></label>
+<label size='3'><b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;factor</b></label></td>
+<td><label size='3'><b>Area m2</b></label>
+<label size='3' ><b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  factor</b></label>
+</td>
+<td><label size='6'><b>K=habitacional</b></label>
+</td>
+<td><label size='3'><b>Tipo</b></label>
+<label size='3' ><b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  factor</b></label>
+</td>
+<td></td>
+
+
+</tr>
+<tr>
+<td><label>$</label>
+<label></label></td>
+<td><label> </label>
+<label> </label>
+</td>
+<td><label></label>
+<label></label></td>
+<td><label></label><label></label></td>
+<td><label></label>
+<label></label></td>
+<td><label></label>
+<label></label></td>
+<td><label>$</label>
+<label></label></td>
+
+</tr>
+
+</tr>
+<tr>
+<td><label>$</label>
+<label></label></td>
+<td><label> </label>
+<label> </label>
+</td>
+<td><label></label>
+<label></label></td>
+<td><label></label><label></label></td>
+<td><label></label>
+<label></label></td>
+<td><label></label>
+<label></label></td>
+<td><label>$</label>
+<label></label></td>
+
+</tr>
+
+</tr>
+<tr>
+<td><label>$</label>
+<label></label></td>
+<td><label> </label>
+<label> </label>
+</td>
+<td><label></label>
+<label></label></td>
+<td><label></label><label></label></td>
+<td><label></label>
+<label></label></td>
+<td><label></label>
+<label></label></td>
+<td><label>$</label>
+<label></label><br><br></td>
+
+</tr>
+
+</table>
+
+</tr>
+
+
+</table>
+</fieldset>
+<fieldset>
+<table class='informacion'>
+<tr>
+	<td>
+	
+<label>Promedio</label>
+<label>$</label>
+<label></label></td>
+<td>
+<label>Lote Promedio:</label></td>
+<td><label></label>
+<label>M²</label>
+</td>
+<td><label></label>
+<label>Vr²</label></td>
+<td><label>Promedio</label>
+
+<label>$</label>
+<label></label></td>
+
+</tr>
+<tr>
+<td></td>
+<td><label>Costo Vr²:</label>
+<label>$</label>
+<label></label></td>
+<td><label>IPC:</label>
+<label></label></td>
+
+</tr>
+<tr>
+<td></td>
+<td><label>Costo Lote Prom:</label>
+<label>$</label>
+<label></label></td>
+<td>
+<select><option>Desv. Std</option>
+<option></option></select>
+</td>
+<td><label>$</label>
+<label></label></td>
+
+</tr>
+<tr>
+<td></td>
+<td><label>Area Valuada:</label></td>
+<td><label></label>
+<label>M²</label></td>
+<td><label></label>
+<label></label></td></tr>
+<tr>
+<td></td>
+<td><label>Tipo de Via:</label>
+<label></label></td></tr>
+</table>
+
+
+</fieldset>
+
+
+		
+	</div>
+</body>
+</html>
