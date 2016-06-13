@@ -27,13 +27,39 @@ require("conexion.php");
 	}
 	if(isset($_GET["q"])){
 	$q = $_GET["q"];
-	$query =  $conexion->query("SELECT * FROM usuario WHERE nombre LIKE '%$q%' OR usuario LIKE '%$q%'");
-	}
+	$query = $conexion->query("SELECT * FROM usuario WHERE nombre LIKE '%$q%' OR usuario LIKE '%$q%'");}
 	else
 	{
 	$q="";
-	$query = $conexion->query("SELECT * FROM  usuario");
+	$query = $conexion->query("SELECT * FROM usuario");
 	}
+	if(!@$query->rowCount()){
+		echo "<br><div>
+		       <strong></strong><br>
+		       No se produjeron resultados.
+		      </div>";
+	}else{
+		$nrows = $query->rowCount();
+		
+		if (isset($_GET["info"])){
+			if ($_GET["info"] == "add")
+			    echo "<br><div>
+			     <strong>Exito</strong><br>
+			    Registro agregado.
+			   </div>";
+				
+			if ($_GET["info"] == "modificar")
+				echo "<br><div>
+			      <strong>Exito</strong><br>
+			    Registro Modificado.
+			   </div>";
+			}
+			else{
+		       echo "<br><div>
+                           Registros encontrados:
+                       <span>$nrows</span>
+                       </div>";
+			
 	echo "<p></p>
          <div>
 		<table class=\"table table-bordered table-hover\">
@@ -56,6 +82,8 @@ require("conexion.php");
 				";
 			}
 			echo "</table>";
+		}
+	}
 echo"</div>";
 require("footer.php");
 ?>

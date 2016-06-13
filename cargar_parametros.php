@@ -27,5 +27,13 @@ while($res = $query->fetch())
 	$count++;
 }
 $tabla = $tabla." </table>";
+if($_GET["id"] != "0")
+{
+
 echo $tabla;
+}
+else
+{
+echo "";
+	}
 ?>

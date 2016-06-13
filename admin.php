@@ -1,4 +1,4 @@
- <?php
+<?php
 require("header.php");
 require("conexion.php");
 ?>		
@@ -7,9 +7,18 @@ require("conexion.php");
 <script type="text/javascript">
 function llenar(serc)
 {
+	var td = document.getElementById("boton");
+	var td2 = document.getElementById("boton2");
+	var boton = "";
+	var boton2 = "";
+	if(serc != "0" || parseInt(serc) != 0)
+	{
+		var boton = "<a  href='mod_parametro.php?id="+serc+"' class=\"btn btn-primary\" style=\"margin-top:2%; margin-bottom:2%; margin-left:-200%;\"> Modificar Parametro</a>";
+		var boton2 = "<a onclick=\"javascript:if(window.confirm('¿Desea eliminar este parametro')){location.replace('admin.php?action=del&id="+serc+"');}\" class=\"btn btn-primary\" style=\"margin-top:2%; margin-bottom:2%; margin-left:-200%;\">Eliminar Parametro</a>";
+		
+	}
 	if (serc == "")
 	{
-		
 	}
 	else
 	{
@@ -30,13 +39,16 @@ function llenar(serc)
 		}
 		xmlhttp.open("GET", "cargar_parametros.php?id="+serc,true);
 		xmlhttp.send();
+		td.innerHTML = boton;
+		td2.innerHTML = boton2;
+	
 	}
 }
 </script>
 	    <form method="GET" id="formulario" >
 	    	<table>
 			    <tr>
-			    	<td>
+			    	<td colsapn="4">
 						<label>Parametro a Gestionar</label>
 			    		<select name="q" class="form-control"  style="width:470px" onchange="llenar(this.value)">
 						<option value='0'>Seleccione</option>
@@ -52,6 +64,8 @@ function llenar(serc)
 				</tr>
 				<tr>
 					<td><a href="add_parametro.php" class="btn btn-primary" style="margin-top:2%; margin-bottom:2%;">Nuevo Parametro</a></td>
+					<td id="boton"></td>
+					<td id="boton2"></td>
 				</tr>
 			 </table>
 			 </form>
@@ -63,6 +77,11 @@ function llenar(serc)
 		if($_GET["action"]== "elimin")
 		{
 			$elim = $conexion->query("DELETE FROM detalle_parametro WHERE id='$_GET[id]'");
+		}
+		if($_GET["action"]== "del")
+		{
+			$elim = $conexion->query("DELETE FROM parametro WHERE id='$_GET[id]'");
+			echo "<script>location.replace('admin.php');</script>";
 		}
 	}
 echo"<div id=\"append\">

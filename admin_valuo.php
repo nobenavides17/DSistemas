@@ -7,14 +7,14 @@ require("conexion.php");
 	    	<table>
 			    <tr>
 			    	<td>
-			    		<input id="q" name="q" class="form-control" placeholder="Ingrese consulta por nombre de producto" style="width:470px" value="<?php if(isset($_GET["q"]))echo $_GET["q"];?>">
+			    		<input id="q" name="q" class="form-control" placeholder="Ingrese consulta por propietario o direccion del inmueble" style="width:470px" value="<?php if(isset($_GET["q"]))echo $_GET["q"];?>">
 				    </td>
 				    <td>
 			    		<button type="submit" class="btn btn-primary " style="margin-left:25%;"> Buscar</button>
 			    	</td>
 				</tr>
 				<tr>
-					<td><a href="add_prod.php" class="btn btn-primary" style="margin-top:5%;">Agregar Producto</a></td>
+					<td><a href="add_valuo.php" class="btn btn-primary" style="margin-top:5%;">Agregar Valuo</a></td>
 				</tr>
 			 </table></form>
 			</div>
@@ -32,7 +32,7 @@ require("conexion.php");
 					}
 					else if(select == 2)
 					{
-						if(window.confirm('¿Desea eliminar este producto'))
+						if(window.confirm('¿Desea eliminar este parametro'))
 						{
 							location.replace("admin_prod.php?action=elimin&id="+id);
 						}
@@ -49,24 +49,24 @@ require("conexion.php");
 
      if(isset($_GET["action"])){
 	 if($_GET["action"]== "elimin"){
-		mysql_query("DELETE FROM producto WHERE id_producto='$_GET[id]'");
+		$conexion->query("DELETE FROM parametro WHERE id_parametro='$_GET[id]'");
 	}
 	}
    if(isset($_GET["q"])){
 	$q = $_GET["q"];
-	$query = mysql_query("SELECT * FROM producto WHERE nombre LIKE '%$q%'");}
+	$query = $conexion->query("SELECT * FROM parametro WHERE nombre LIKE '%$q%'");}
 	else
 	{
 	$q="";
-	$query = mysql_query("SELECT * FROM producto");
+	$query = $conexion->query("SELECT * FROM parametro");
 	}
-	if(!@mysql_num_rows($query)){
+	if(!@$query->rowCount()){
 		echo "<br><div>
-		       <strong>Error</strong><br>
+		       <strong></strong><br>
 		       No se produjeron resultados.
 		      </div>";
 	}else{
-		$nrows =mysql_num_rows($query);
+		$nrows = $query->rowCount();
 		
 		if (isset($_GET["info"])){
 			if ($_GET["info"] == "add")
@@ -91,13 +91,13 @@ require("conexion.php");
                 <div>
 		<table class=\"table table-bordered table-hover\">
 		<tr class=\"success\">
-			<td>Id Producto</td>
+			<td>Id parametro</td>
 			<td>Nombre</td>
 			<td>Marca</td>
 			<td>Presentacion</td>
 			<td>Acciones</td>
 			</tr>";	
-		while($data = mysql_fetch_array($query)){
+		while($data =$query->fetch()){
 			echo "<tr>
 				<td>$data[0]</td>
 				<td>($data[1]) $data[2]</td>
@@ -111,7 +111,7 @@ require("conexion.php");
 				</select></td> 
 				<div id='dialog$data[0]' style='display:none;'>
 				<div style='width:150px; text-align:left; float:left; font-weight:bold;'>Campo</div><div style='width:250px; text-align:left; float:left; display:inline; font-weight:bold;'>Descripcion</div><br>
-            <div style='width:150px; text-align:left; float:left;'>Id Producto</div><div style='width:250px; text-align:left; float:left; display:inline;'>$data[0]</div><br>
+            <div style='width:150px; text-align:left; float:left;'>Id parametro</div><div style='width:250px; text-align:left; float:left; display:inline;'>$data[0]</div><br>
             <div style='width:150px; text-align:left; float:left;'>Descripcion</div><div style='width:250px; text-align:left; float:left; display:inline;'>$data[3]</div><br>
             <div style='width:150px; text-align:left; float:left;'>Codigo de barra</div><div style='width:250px; text-align:left; float:left; display:inline;'>$data[1]</div><br>
             <div style='width:150px; text-align:left; float:left;'>Unidad</div><div style='width:250px; text-align:left; float:left; display:inline;'>$data[4]</div><br>
