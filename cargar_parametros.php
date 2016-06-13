@@ -19,7 +19,7 @@ while($res = $query->fetch())
 	<td style='width:10%;'>".$count."</td>
 	<td style='width:50%;'>".$res[2]."</td>
 	<td style='width:15%;'>
-	<a href='mod_detalle.php?id=$res[0]&id2=$id&nombre=$titulo[1]'>Modificar</a><br>
+	<a href='mod_detalle.php?id=$res[0]&nombre=$titulo[1]'>Modificar</a><br>
 	<a onclick=\"javascript:if(window.confirm('¿Desea eliminar este parametro'))
 	{location.replace('admin.php?action=elimin&id=$res[0]');}\">Eliminar</a>
 	</td>

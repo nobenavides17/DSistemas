@@ -5,7 +5,7 @@ if(isset($_GET["id"]))
 {
 $query0 = $conexion->query("SELECT detalle FROM detalle_parametro WHERE id = '$_GET[id]'");
 $query00 = $query0->fetch();
-$id = $_GET["id2"];
+$id = $_GET["id"];
 }
 ?>
 <div>
@@ -17,7 +17,7 @@ $id = $_GET["id2"];
 		<td><label style="font-weight:bold; font-size:15px;">Parametro: <?php if(isset($_GET["nombre"])) echo $_GET["nombre"]; ?></label></td>
 	</tr>
 		<td>
-			<input type="text" name="nombre" class="form-control" required  <?php echo "value='$query00[0]'"?> style="width:90%;">
+			<input type="text" name="nombre" class="form-control" required  <?php echo "value='$query00[0]'";?> style="width:90%;">
 		</td>
 	</tr>
 	<tr>
