@@ -34,6 +34,7 @@ if($_POST)
 	$query=$conexion->query("UPDATE detalle_parametro SET detalle = '$_POST[nombre]' WHERE id = '$id'");
 	if($query)
 	{
+		echo $log->insert("Usuario ".$_SESSION["log"]." modifico el detalle de  parametro".$query00[0]." a ".$_POST['nombre']."", false, false, false);	
 		echo "<script>location.replace('admin.php');</script>";
 	}
 	else

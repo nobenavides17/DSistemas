@@ -1,4 +1,9 @@
-<?php require("session.php");?>
+<?php 
+	require("session.php");
+	include("log.php");
+	$log = new Log("log", "log/");	
+	
+?>
 <!DOCTYPE html>
 <html lang="es"><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -76,7 +81,7 @@
           <a class="brand" href="index.php" style="color:#FFF;">Sistema de Valuacion de Bienes Inmuebles</a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
-              <a href="login.php" class="navbar-link" style="color:#FFF;"><?php echo $_SESSION["user"];?> (Salir)</a>
+              <a href="logout.php" class="navbar-link" style="color:#FFF;"><?php echo $_SESSION["user"];?> (Salir)</a>
             </p>
           </div><!--/.nav-collapse -->
         </div>
@@ -98,6 +103,9 @@
                 </li>
                  <li>
                     <a href="admin_valuo.php">Valuos</a>
+                </li>
+                 <li>
+                    <a href="backup.php">Copia de Respaldo</a>
                 </li>
             </ul>
         </div>

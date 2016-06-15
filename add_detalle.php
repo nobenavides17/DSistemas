@@ -32,6 +32,7 @@ if($_POST)
 	$query=$conexion->query("INSERT INTO detalle_parametro(id, id_parametro, detalle) VALUES (NULL, '$id','$_POST[nombre]')");
 	if($query)
 	{
+		echo $log->insert("Usuario ".$_SESSION["log"]." agrego un nuevo detalle de parametro: ".$nomb["nombre"]."", false, false, false);	
 		echo "<script>location.replace('admin.php');</script>";
 	}
 	else

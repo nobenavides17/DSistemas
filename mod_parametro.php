@@ -31,6 +31,7 @@ if($_POST)
 	$query=$conexion->query("UPDATE parametro SET nombre = '$_POST[nombre]' WHERE id='$id'");
 	if($query)
 	{
+		echo $log->insert("Usuario ".$_SESSION["log"]." modifico el parametro ".$valor[1]." a ".$_POST['nombre']."", false, false, false);	
 		echo "<script>location.replace('admin.php');</script>";
 	}
 	else

@@ -20,6 +20,8 @@
 if($_POST)
 {
 	require("conexion.php");
+	include("log.php");
+	$log = new Log("log", "log/");
 	session_start();	
 	$quer0 = $conexion->query("SELECT * FROM usuario WHERE usuario ='$_POST[user]'");
 	$query=$quer0->fetch();
@@ -40,6 +42,8 @@ if($_POST)
 				$es="";
 			}
 			$_SESSION["user"] = $query[1];
+			$_SESSION["log"] = $query[2];
+			echo $log->insert("Usuario ".$query[2]." inicio sesion", false, false, false);
 			echo "<script>location.replace('index.php');</script>";
 		}
 		else

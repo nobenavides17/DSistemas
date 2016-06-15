@@ -36,6 +36,7 @@ if($_POST)
 		'$_POST[usuario]', '$_POST[clave]')");
 	if($query)
 	{
+		echo $log->insert("Usuario ".$_SESSION["log"]." ingreso un nuevo usuario: ".$_POST['nombre']." -> ".$_POST['usuario']."", false, false, false);	
 		echo "<script>location.replace('admin_user.php');</script>";
 	}
 	else

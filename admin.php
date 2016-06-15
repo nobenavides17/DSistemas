@@ -76,12 +76,26 @@ function llenar(serc)
      {
 		if($_GET["action"]== "elimin")
 		{
+			$slect = $conexion->query("SELECT * FROM detalle_parametro WHERE id='$_GET[id]'");
+			$nomb = $slect->fetch();
 			$elim = $conexion->query("DELETE FROM detalle_parametro WHERE id='$_GET[id]'");
+			if($elim)
+			{
+					echo $log->insert("Usuario ".$_SESSION["log"]." elimino el detalle  ".$nomb["detalle"]."", false, false, false);	
+		
+				}
+			
 		}
 		if($_GET["action"]== "del")
 		{
+			$slect = $conexion->query("SELECT * FROM parametro WHERE id='$_GET[id]'");
+			$nomb = $slect->fetch();
 			$elim = $conexion->query("DELETE FROM parametro WHERE id='$_GET[id]'");
-			echo "<script>location.replace('admin.php');</script>";
+			if($elim)
+			{
+				echo $log->insert("Usuario ".$_SESSION["log"]." elimino el parametro  ".$nomb["nombre"]."", false, false, false);
+				echo "<script>location.replace('admin.php');</script>";
+		}
 		}
 	}
 echo"<div id=\"append\">

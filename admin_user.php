@@ -22,7 +22,13 @@ require("conexion.php");
 
      if(isset($_GET["action"])){
 	 if($_GET["action"]== "elimin"){
+		$slect = $conexion->query("SELECT * FROM usuario WHERE id ='$_GET[id]'");
+		$nomb = $slect->fetch();
 		$elim = $conexion->query("DELETE FROM usuario WHERE id ='$_GET[id]'");
+		if($elim)
+		{
+			echo $log->insert("Usuario ".$_SESSION["log"]." elimino al usuario ".$nomb["usuario"]."", false, false, false);	
+			}
 	}
 	}
 	if(isset($_GET["q"])){
