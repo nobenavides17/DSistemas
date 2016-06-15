@@ -21,9 +21,9 @@
 		
 		<div id="menu">
 			<ul id="main-nav" class="clearfix">
-				<li><a href="index.html">INICIO</a></li>
-				<li><a href="Quienes_somos.html">QUIENES SOMOS</a></li>
-				<li><a href="Servicios.html">SERVICIOS</a></li>
+				<li><a href="index.php">INICIO</a></li>
+				<li><a href="Quienes_somos.php">QUIENES SOMOS</a></li>
+				<li><a href="Servicios.php">SERVICIOS</a></li>
 				<li><a href="admin/login.php" class="iniciar">[ INICIAR SESION ]</a></li>		
 			</ul>
 		</div>

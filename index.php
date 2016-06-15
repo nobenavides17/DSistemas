@@ -7,12 +7,10 @@
 		<meta charset="utf-8">
 		<meta http.equiv="contet.type" content="text/html; charset=UTF8">
 		<link rel="StyleSheet" href="css/estilo.css" type="text/css">
-		<link rel="stylesheet" href="css/layout.css">
-		
 		<title>GAMEZ S.A. de C.V.</title>
 
 	</head>
-	<body>
+	<body >
 		
 		<div id="baner">
 			<img class="logo" src="img/baner2.png">
@@ -23,15 +21,13 @@
 
 		<div id="menu">
 			<ul id="main-nav" class="clearfix">
-				<li><a href="index.html">INICIO</a></li>
-				<li><a href="Quienes_somos.html">QUIENES SOMOS</a></li>
-				<li><a href="Servicios.html">SERVICIOS</a></li>
+				<li><a href="index.php">INICIO</a></li>
+				<li><a href="Quienes_somos.php">QUIENES SOMOS</a></li>
+				<li><a href="Servicios.php">SERVICIOS</a></li>
 				<li><a href="admin/login.php" class="iniciar">[ INICIAR SESION ]</a></li>		
 			</ul>
 		</div>	
 			
-
-
 <div id="page">
             <section>
                 <input type="radio" name="slider-select-element" id="element1" checked="checked" />
@@ -67,12 +63,6 @@
          
         </div>
          </div>
-      
-         
-      
-               
-
-		
 	</body>
 </html>
 

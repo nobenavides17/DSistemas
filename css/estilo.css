@@ -2,17 +2,8 @@ body{
 background:#3D4048;
 }
 
-#contenedor{
-background-color:#C3C4C6;
-margin:auto;
-width:98%;
-border: 1px solid black;
-border-radius:5px;
-box-shadow:5px  5px 5px;
-}
 #entorno{
 background: #fff;
-
 	box-shadow: 0 1px 3px rgba(0,0,0,.4);
 	box-shadow: 0 1px 3px rgba(0,0,0,.4);
 	box-shadow: 0 1px 3px rgba(0,0,0,.4);
@@ -70,15 +61,15 @@ display:inline-block;
 
 
 #main-nav li{
-	margin-left: 70px;
-	margin-top: 10px;
+	margin-left: 5%;
+	margin-top: 1%;
 	padding: 0;
 	list-style: none;
 	float: left;
 	position: relative;
 }
 .iniciar{
-margin-left: 400px;
+margin-left: 300px;
 
 }
 
@@ -126,9 +117,12 @@ width: 95%;
 height: 15%;
 background: #262C33;
 display: center;
-margin-left: 5%;
+margin: auto;
 }
-
+#menu{
+margin-left:-2.5%;
+width:100%;
+}
 .registrar
 {
 BACKGROUND-COLOR:#78A2EE;
@@ -214,7 +208,12 @@ color: #FFFFFF;
 	height: 400px;
 }
 
-.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+.clearfix:after { visibility: hidden; 
+display: block; 
+font-size: 0; 
+content: " "; 
+clear: both; 
+height: 0; }
 .clearfix { display: inline-block; }
 .clearfix { display: block; zoom: 1; }	
 .clearfix{float: right;}

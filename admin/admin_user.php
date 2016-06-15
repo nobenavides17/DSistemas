@@ -69,7 +69,7 @@ require("conexion.php");
 	echo "<p></p>
          <div>
 		<table class=\"table table-bordered table-hover\">
-			<tr class=\"success\">
+			<tr class=\"success\" style=\"background:#C8D3EF;\">
 			<td>Id Usuario</td>
 			<td>Nombre</td>
 			<td>Usuario</td>

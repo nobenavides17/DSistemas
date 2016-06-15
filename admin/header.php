@@ -93,19 +93,19 @@
           <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a href="index.php">Inicio</a>
+                    <a href="index.php" style="color:#FFF; font-weight:bold;">Inicio</a>
                 </li>
                  <li>
-                    <a href="admin.php">Parametros de gestion</a>
+                    <a href="admin.php" style="color:#FFF; font-weight:bold;">Parametros de gestion</a>
                 </li>
                  <li>
-                    <a href="admin_user.php">Usuarios</a>
+                    <a href="admin_user.php" style="color:#FFF; font-weight:bold;">Usuarios</a>
                 </li>
                  <li>
-                    <a href="admin_valuo.php">Valuos</a>
+                    <a href="admin_valuo.php" style="color:#FFF; font-weight:bold;">Valuos</a>
                 </li>
                  <li>
-                    <a href="backup.php">Copia de Respaldo</a>
+                    <a href="backup.php" style="color:#FFF; font-weight:bold;">Copia de Respaldo</a>
                 </li>
             </ul>
         </div>
