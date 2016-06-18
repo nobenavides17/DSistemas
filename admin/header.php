@@ -60,7 +60,6 @@
     </style>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/simple-sidebar.css" rel="stylesheet">
-    <link href="css/estilo.css" rel="stylesheet">
      <script src="js/jquery.js"></script>
      <script src="js/script.js"></script>
     <script src="js/jquery-ui.js"></script>

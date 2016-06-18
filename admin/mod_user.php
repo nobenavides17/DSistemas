@@ -42,7 +42,7 @@ if($_POST)
 	WHERE id = '$id'");
 	if($query)
 	{
-		echo $log->insert("Usuario ".$_SESSION["log"]." modifico los datos del  usuario ".$valor[2]." a ".$_POST['usuario']."", false, false, false);	
+		$log->insert("Usuario ".$_SESSION["log"]." modifico los datos del  usuario ".$valor[2]." a ".$_POST['usuario']."", false, false, false);	
 		echo "<script>location.replace('admin_user.php');</script>";
 	}
 	else

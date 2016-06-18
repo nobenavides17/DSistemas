@@ -49,7 +49,7 @@ require("conexion.php");
 
      if(isset($_GET["action"])){
 	 if($_GET["action"]== "elimin"){
-		$conexion->query("DELETE FROM parametro WHERE id_parametro='$_GET[id]'");
+		$conexion->query("");
 	}
 	}
    if(isset($_GET["q"])){
@@ -129,5 +129,5 @@ require("conexion.php");
 			echo "</tr></table>";
 		}
 echo"</div>";
-require("fotter.php");
+require("footer.php");
 ?>

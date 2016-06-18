@@ -25,7 +25,7 @@ if($_POST)
 	$query=$conexion->query("INSERT INTO parametro (id, nombre) VALUES (NULL, '$_POST[nombre]')");
 	if($query)
 	{
-		echo $log->insert("Usuario ".$_SESSION["log"]." agrego un nuevo parametro: ".$nomb["nombre"]."", false, false, false);	
+		$log->insert("Usuario ".$_SESSION["log"]." agrego un nuevo parametro: ".$nomb["nombre"]."", false, false, false);	
 		echo "<script>location.replace('admin.php');</script>";
 	}
 	else
@@ -33,5 +33,5 @@ if($_POST)
 		echo mysql_error();//"<script>alert('Error al insertar');</script>";
 	}
 }
-require("fotter.php");
+require("footer.php");
 ?>

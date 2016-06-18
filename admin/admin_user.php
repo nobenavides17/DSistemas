@@ -24,10 +24,11 @@ require("conexion.php");
 	 if($_GET["action"]== "elimin"){
 		$slect = $conexion->query("SELECT * FROM usuario WHERE id ='$_GET[id]'");
 		$nomb = $slect->fetch();
+		$log->backup($user, $pass, $db);
 		$elim = $conexion->query("DELETE FROM usuario WHERE id ='$_GET[id]'");
 		if($elim)
 		{
-			echo $log->insert("Usuario ".$_SESSION["log"]." elimino al usuario ".$nomb["usuario"]."", false, false, false);	
+			$log->insert("Usuario ".$_SESSION["log"]." elimino al usuario ".$nomb["usuario"]."", false, false, false);	
 			}
 	}
 	}
@@ -69,7 +70,7 @@ require("conexion.php");
 	echo "<p></p>
          <div>
 		<table class=\"table table-bordered table-hover\">
-			<tr class=\"success\" style=\"background:#C8D3EF;\">
+			<tr class=\"success\">
 			<td>Id Usuario</td>
 			<td>Nombre</td>
 			<td>Usuario</td>

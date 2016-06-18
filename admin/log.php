@@ -29,6 +29,16 @@
      
     return $result;
     }
+       public function backup($user, $pass, $db)
+    {
+		$target_path = getcwd();
+		$now = str_replace("", "", date("d-m-Y H:i"));
+		$outputfilename = $db . '-' . $now . '.sql';
+		$outputfilename = str_replace(" ", "-", $outputfilename);
+		$save_path = $target_path . '/'.$outputfilename; 
+		$command = "mysqldump --user=$user --password=$pass $db > $outputfilename";
+		shell_exec($command);
+	}
     }}
     catch(Exception $ex)
     {

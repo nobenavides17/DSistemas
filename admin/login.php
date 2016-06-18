@@ -59,7 +59,7 @@ if($_POST)
 			}
 			$_SESSION["user"] = $query[1];
 			$_SESSION["log"] = $query[2];
-			echo $log->insert("Usuario ".$query[2]." inicio sesion", false, false, false);
+		    $log->insert("Usuario ".$query[2]." inicio sesion", false, false, false);
 			echo "<script>location.replace('index.php');</script>";
 		}
 		else

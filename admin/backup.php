@@ -3,7 +3,7 @@ include("sesion.php");
 include("conexion.php");
 if(isset($_POST['crear'])){
   $target_path = getcwd();
-  $now = str_replace(":", "", date("Y-m-d H:i"));
+  $now = str_replace("", "", date("d-m-Y H:i"));
   $outputfilename = $db . '-' . $now . '.sql';
   $outputfilename = str_replace(" ", "-", $outputfilename);
   $save_path = $target_path . '/'.$outputfilename;

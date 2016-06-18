@@ -78,10 +78,11 @@ function llenar(serc)
 		{
 			$slect = $conexion->query("SELECT * FROM detalle_parametro WHERE id='$_GET[id]'");
 			$nomb = $slect->fetch();
+			$log->backup($user, $pass, $db);
 			$elim = $conexion->query("DELETE FROM detalle_parametro WHERE id='$_GET[id]'");
 			if($elim)
 			{
-					echo $log->insert("Usuario ".$_SESSION["log"]." elimino el detalle  ".$nomb["detalle"]."", false, false, false);	
+			    $log->insert("Usuario ".$_SESSION["log"]." elimino el detalle  ".$nomb["detalle"]."", false, false, false);	
 		
 				}
 			
@@ -90,10 +91,11 @@ function llenar(serc)
 		{
 			$slect = $conexion->query("SELECT * FROM parametro WHERE id='$_GET[id]'");
 			$nomb = $slect->fetch();
+			$log->backup($user, $pass, $db);
 			$elim = $conexion->query("DELETE FROM parametro WHERE id='$_GET[id]'");
 			if($elim)
 			{
-				echo $log->insert("Usuario ".$_SESSION["log"]." elimino el parametro  ".$nomb["nombre"]."", false, false, false);
+				$log->insert("Usuario ".$_SESSION["log"]." elimino el parametro  ".$nomb["nombre"]."", false, false, false);
 				echo "<script>location.replace('admin.php');</script>";
 		}
 		}
@@ -101,5 +103,5 @@ function llenar(serc)
 echo"<div id=\"append\">
 	
 	</div></div>";
-require("fotter.php");
+require("footer.php");
 ?>
