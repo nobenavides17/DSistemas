@@ -32,8 +32,9 @@ require("conexion.php");
 <?php 
 if($_POST)
 {
+	$clave = MD5($_POST["clave"]);
 	$query=$conexion->query("INSERT INTO usuario(id, nombre,usuario,password) VALUES (NULL, '$_POST[nombre]',
-		'$_POST[usuario]', '$_POST[clave]')");
+		'$_POST[usuario]', '$clave')");
 	if($query)
 	{
 		$log->insert("Usuario ".$_SESSION["log"]." ingreso un nuevo usuario: ".$_POST['nombre']." -> ".$_POST['usuario']."", false, false, false);	

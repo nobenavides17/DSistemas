@@ -41,22 +41,17 @@ if($_POST)
 	session_start();	
 	$quer0 = $conexion->query("SELECT * FROM usuario WHERE usuario ='$_POST[user]'");
 	$query=$quer0->fetch();
+	$n = $quer0->rowCount();
 	if($query[0] == "")
 	{
 		echo "<script>alert('No existe el usuario ingresado');</script>";
 	}
 	else
 	{
-		if($_POST["clave"] == $query[3])
+		if($n > 0)
 		{
-			if($_POST["user"]==$query[2])
-			{
-				$es="si";
-			}
-			else
-			{
-				$es="";
-			}
+		if(MD5($_POST["clave"]) == $query[3])
+		{
 			$_SESSION["user"] = $query[1];
 			$_SESSION["log"] = $query[2];
 		    $log->insert("Usuario ".$query[2]." inicio sesion", false, false, false);
@@ -65,6 +60,11 @@ if($_POST)
 		else
 		{
 			echo "<script>alert('La clave de acceso es incorrecta');</script>";
+		}
+	}
+	else
+		{
+			echo "<script>alert('No existe el usuario ingresado');</script>";
 		}
 	}
 }

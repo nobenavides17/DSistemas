@@ -38,7 +38,8 @@ $valor = $query0->fetch();
 <?php 
 if($_POST)
 {
-	$query=$conexion->query("UPDATE usuario SET nombre =  '$_POST[nombre]', usuario = '$_POST[usuario]', password= '$_POST[clave]'
+	$clave = MD5($_POST["clave"]);
+	$query=$conexion->query("UPDATE usuario SET nombre =  '$_POST[nombre]', usuario = '$_POST[usuario]', password= '$clave'
 	WHERE id = '$id'");
 	if($query)
 	{
