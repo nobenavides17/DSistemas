@@ -15,7 +15,8 @@
 	<body>
 		
 		<div id="baner">
-			<img class="logo" src="img/baner2.png">
+			<img class="imgbaner" src="img/baner2.png">
+			
 		</div>
 		
 		

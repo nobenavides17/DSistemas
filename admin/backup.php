@@ -57,7 +57,7 @@ require("header.php");
         <div class="panel-body">
           <form method="POST">
             <input type="hidden" name="crear" value="crear">
-            <input type="submit" value="Crear Copia">
+            <input type="submit" class="btn btn-primary" value="Crear Copia">
           </form>
             
         </div>
@@ -69,9 +69,9 @@ require("header.php");
   </div>
   <div class="panel-body">
     <form method="POST" enctype="multipart/form-data">
-      <input type="file" name="databasefile" / required>
+      <input type="file" name="databasefile" / required >
       <br><br>
-      <input type="submit" value="Restaurar"/>
+      <input type="submit" value="Restaurar" class="btn btn-primary"/>
     </form>
   </div>
 </div>

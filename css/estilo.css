@@ -1,9 +1,44 @@
 body{
-background:#3D4048;
+background:#6A7678;
 }
 
+#contenedor{
+background-color:#C3C4C6;
+margin-top: 100px;
+width:98%;
+
+}
+#contenedor1{
+background-color:#fff;
+width:1024;
+
+
+}
+#log{
+height: 120px;
+width: 220px;
+float: left;
+margin-bottom: 10px;
+margin-left: 20px;
+margin-top: 20px;
+}
+
+.logo{
+height: 100px;
+width: 200px;
+
+float: left;
+}
+.reporte{
+text-align: center;
+}
+.label1{
+margin-left: 40%;
+
+}
 #entorno{
 background: #fff;
+
 	box-shadow: 0 1px 3px rgba(0,0,0,.4);
 	box-shadow: 0 1px 3px rgba(0,0,0,.4);
 	box-shadow: 0 1px 3px rgba(0,0,0,.4);
@@ -53,35 +88,25 @@ font-weight: bold;
 }
 
 #main-nav{
-background-color:#312EE7;
-height:40px;
-width:95%;
+background-color:#3F3E80;
+height:43px;
+width:90%;
 display:inline-block;
+margin-right: 5%;
 }
 
 
 #main-nav li{
-	margin-left: 5%;
-	margin-top: 1%;
-	padding: 0;
+	margin-left: 60px;
+	margin-top: 10px;
+
 	list-style: none;
 	float: left;
-	position: relative;
+	
 }
 .iniciar{
 margin-left: 300px;
 
-}
-
-#login{
-    
-	BACKGROUND-COLOR:#78A2EE;
-	display:inline-block;
-	width: 360px;
-	height:130px;
-	border-radius:30px;
-	
-	float: right;
 }
 
 #login label{
@@ -107,22 +132,21 @@ margin-top:10px;
 	height: 75px;
 }
 
-.logo{
-height: 250px;
-width: 60%;
-margin-left:20%;
-}
+
 #baner{
-width: 95%;
-height: 15%;
-background: #262C33;
+width: 90%;
+height: 8%%;
+background: #212830;
 display: center;
-margin: auto;
+margin-left: 5%;
+margin-right: 5%;
+
 }
-#menu{
-margin-left:-2.5%;
-width:100%;
+.imgbaner{
+height:300px;
+margin-left:22.5%
 }
+
 .registrar
 {
 BACKGROUND-COLOR:#78A2EE;
@@ -158,16 +182,16 @@ border-radius: 35px;
 }
 
 .Qsomos{
-width: 800px;
-height: 1000px;
-margin-left: 275px;
-BACKGROUND-COLOR:#2169CE;
-margin-top: 80px;
-
+width: 85%;
+height: 80%;
+margin-left: 8%;
+BACKGROUND-COLOR:#42547A;
+margin-top: 7%;
+border-radius: 15px;
 }
 h1{
 text-align: center;
-color: #041745;
+color: #212830;
 font-family: Arial Black;
 
 }
@@ -178,9 +202,9 @@ font-size: 16;
 color: #FFFFFF;
 }
 
-h3{
+h3, h4{
 text-align: center;
-color: #041745;
+color: #212830;
 font-family: Arial Black;
 
 }
@@ -189,6 +213,31 @@ text-align: center;
 font-family: Arial Black;
 font-size: 16;
 color: #FFFFFF;
+}
+#servicios{
+width: 100%;
+height: 20%;
+margin-bottom:5%;
+
+}
+h2{
+text-align: center;
+color: #FFFFFF;
+}
+
+.imgservicios{
+float: left;
+margin-left: 8%;
+width: 250px;
+height: 200px;
+}
+.imgservicios2{
+
+float: rigth;
+margin-left: 8%;
+
+width: 250px;
+height: 200px;
 }
 
 .foto1{
@@ -208,12 +257,7 @@ color: #FFFFFF;
 	height: 400px;
 }
 
-.clearfix:after { visibility: hidden; 
-display: block; 
-font-size: 0; 
-content: " "; 
-clear: both; 
-height: 0; }
+.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
 .clearfix { display: inline-block; }
 .clearfix { display: block; zoom: 1; }	
 .clearfix{float: right;}
@@ -246,15 +290,15 @@ input[name="slider-select-element"] {
     width: 310%;
 }
 .slide {
-margin-top:50px;
-margin-left:10%;
+margin-top:3%;
+margin-left: 15%;
 height:300px;
 width:700px;
 }
 
 #slider-container {
     height: 20%;
-    margin: 0 auto;
+    margin-left:10%;
     overflow: hidden;
     text-align: left;
     width: 80%;

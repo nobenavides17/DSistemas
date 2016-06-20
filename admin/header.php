@@ -104,6 +104,9 @@
                     <a href="admin_valuo.php" style="color:#FFF; font-weight:bold;">Valuos</a>
                 </li>
                  <li>
+                    <a href="view_report.php" style="color:#FFF; font-weight:bold;">Reportes</a>
+                </li>
+                 <li>
                     <a href="backup.php" style="color:#FFF; font-weight:bold;">Copia de Respaldo</a>
                 </li>
             </ul>

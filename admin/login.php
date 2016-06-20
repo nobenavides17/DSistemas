@@ -3,24 +3,33 @@
 	<head>
 		<meta name="description" content="descripcion de mi web">
 		<meta name="keyswords" content="HTML,CSS.XML,JavaScript">
+		<meta name="author" content="Norma Martinez">
 		<meta charset="utf-8">
+		<meta http.equiv="contet.type" content="text/html; charset=UTF8">
 		<link rel="StyleSheet" href="../css/estilo.css" type="text/css">
-		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="StyleSheet" href="css/bootstrap.css" type="text/css">
+		
 		<title>GAMEZ S.A. de C.V.</title>
 
 	</head>
-	<body style='background:#3D4048;'>
-		<div id="baner" style="margin-top:1%;">
-			<img class="logo" src="../img/baner2.png">
+	<body style="background:#6A7678;">
+		
+		<div id="baner" style="margin-top:0.6%;">
+			<img class="imgbaner" src="../img/baner2.png">
 			
 		</div>
-		<div id="menu" style="margin-top:1.5%;">
+	
+		
+
+		<div id="menu" style="margin-top:1.3%;">
 			<ul id="main-nav" class="clearfix">
 				<li><a href="../index.php" style="color:#FFF;">INICIO</a></li>
 				<li><a href="../Quienes_somos.php" style="color:#FFF;">QUIENES SOMOS</a></li>
 				<li><a href="../Servicios.php" style="color:#FFF;">SERVICIOS</a></li>
 			</ul>
-		</div>				
+		</div>	
+			
+			
 <div style="margin-left:40%; margin-top:8%;">
 <h3 style="margin-left:-60%; color:#fff;">Iniciar Sesion</h3>
 <form method="POST">
